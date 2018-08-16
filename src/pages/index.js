@@ -1,20 +1,27 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Link from 'gatsby-link';
+import styled from 'styled-components';
+import Header from 'components/Header';
 
-const IndexPage = ({ data }) => (
-  <div>
-    <h1>Testing</h1>
-    <p>Now go build something great.</p>
-    <Img sizes={data.logoInMac.sizes} style={{ width: '710px' }}/>
-    <Img sizes={data.mobile.sizes} style={{ width: '220px' }}/>
-  </div>
-);
+const Wrapper = styled.div``;
+
+function IndexPage({ data }) {
+  const { logoInMacbook, mobileLogo, piggy } = data;
+  return (
+    <Wrapper>
+      <Header
+        logoInMacbook={logoInMacbook.sizes}
+        mobileLogo={mobileLogo.sizes}
+        piggy={piggy.sizes}
+      />
+    </Wrapper>
+  );
+}
 
 export const query = graphql`
   query IndexQuery {
-    logoInMac: imageSharp(id: { regex: "/logo_in_mac.png/" }) {
-      sizes(maxWidth: 710) {
+    mobileLogo: imageSharp(id: { regex: "/mobileLogo.png/" }) {
+      sizes(maxWidth: 152) {
         src
         srcSet
         srcWebp
@@ -24,8 +31,8 @@ export const query = graphql`
         tracedSVG
       }
     }
-    mobileLogo: imageSharp(id: { regex: "/mobile_logo.png/" }) {
-      sizes(maxWidth: 456) {
+    logoInMacbook: imageSharp(id: { regex: "/logo_in_macbook.png/" }) {
+      sizes(maxWidth: 710) {
         src
         srcSet
         srcWebp
@@ -90,8 +97,8 @@ export const query = graphql`
         tracedSVG
       }
     }
-    tearOfJoyMac: imageSharp(id: { regex: "/tear_of_joy_mac.jpg/" }) {
-      sizes(maxWidth: 395) {
+    tearOfJoy: imageSharp(id: { regex: "/tear_of_joy.jpg/" }) {
+      sizes(maxWidth: 422) {
         src
         srcSet
         srcWebp
@@ -101,8 +108,8 @@ export const query = graphql`
         tracedSVG
       }
     }
-    tearOfJoy: imageSharp(id: { regex: "/tear_of_joy.jpg/" }) {
-      sizes(maxWidth: 422) {
+    tearOfJoyMac: imageSharp(id: { regex: "/tear_of_joy_mac.jpg/" }) {
+      sizes(maxWidth: 395) {
         src
         srcSet
         srcWebp
