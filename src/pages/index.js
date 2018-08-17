@@ -9,7 +9,15 @@ const Wrapper = styled.div`
 `;
 
 function IndexPage({ data }) {
-  const { logoInMacbook, mobileAndTabletLogo, piggy, peopleOfClane, tearOfJoy } = data;
+  const {
+    logoInMacbook,
+    mobileAndSupermarket,
+    mobileAndTabletLogo,
+    peopleOfClane,
+    piggy,
+    tearOfJoy,
+    tearOfJoyMac
+  } = data;
   return (
     <Wrapper>
       <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
@@ -27,6 +35,22 @@ function IndexPage({ data }) {
         headerFirstLineText="What was"
         headerSecondLineText="the creative brief?"
         imageSizes={peopleOfClane.sizes}
+        mobileAndDesktopImageWidth="100vw"
+        textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
+      />
+      <TextBoxAndImgBoxContainer
+        backgroundColor={green}
+        headerFirstLineText="What was"
+        headerSecondLineText="the creative concept?"
+        imageSizes={tearOfJoyMac.sizes}
+        mobileAndDesktopImageWidth="81vw"
+        textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
+      />
+      <TextBoxAndImgBoxContainer
+        backgroundColor={darkGrey}
+        headerFirstLineText="How did"
+        headerSecondLineText="it go?"
+        imageSizes={mobileAndSupermarket.sizes}
         mobileAndDesktopImageWidth="100vw"
         textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
       />
@@ -81,29 +105,7 @@ export const query = graphql`
         tracedSVG
       }
     }
-    mobile: imageSharp(id: { regex: "/mobile.jpg/" }) {
-      sizes(maxWidth: 220) {
-        src
-        srcSet
-        srcWebp
-        srcSetWebp
-        sizes
-        aspectRatio
-        tracedSVG
-      }
-    }
-    supermarket: imageSharp(id: { regex: "/supermarket.jpg/" }) {
-      sizes(maxWidth: 229) {
-        src
-        srcSet
-        srcWebp
-        srcSetWebp
-        sizes
-        aspectRatio
-        tracedSVG
-      }
-    }
-    mobileAndSupermarket: imageSharp(id: { regex: "/mobile_and_supermarket.jpg/" }) {
+    mobileAndSupermarket: imageSharp(id: { regex: "/mobile_and_supermarket.png/" }) {
       sizes(maxWidth: 497) {
         src
         srcSet

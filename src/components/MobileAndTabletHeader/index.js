@@ -5,7 +5,7 @@ import { green } from 'sharedStyles';
 
 const Wrapper = styled.div`
   background: ${green};
-  padding: 4vw 0 3.9vw;
+  padding: 4vw 0;
   margin-bottom: 8vw;
 `;
 
