@@ -5,7 +5,7 @@ import { TextBox, ImgBox } from 'components';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 8vw 0;
+  padding-bottom: 8vw;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
