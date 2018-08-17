@@ -12,6 +12,9 @@ const LightGreyBox = styled.div`
   width: 71%;
   margin: 0 auto;
   padding: 3.5% 5%;
+  position: relative;
+  top: 5.5vw;
+  box-shadow: 0.639em 0.639em 1.688em rgba(35, 31, 32, 0.25);
 `;
 
 const Header = styled.h2`
@@ -24,6 +27,7 @@ const Header = styled.h2`
 const Text = styled.p`
   text-align: center;
   margin-top: 5%;
+  margin-bottom: 25%;
 `;
 
 function Textbox({ headerFirstLineText, headerSecondLineText, textContent }) {
