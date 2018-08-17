@@ -15,7 +15,6 @@ function IndexPage({ data }) {
       <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
       {/* <DesktopHeader logoInMacbookSizes={logoInMacbook.sizes} piggySizes={piggy.sizes} /> */}
       <TextBoxAndImgBoxContainer
-        addTopPadding
         backgroundColor={green}
         headerFirstLineText="What was"
         headerSecondLineText="the campaign?"
