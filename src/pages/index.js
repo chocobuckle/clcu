@@ -1,34 +1,34 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import styled from 'styled-components';
-import Header from 'components/Header';
+import { MobileAndTabletHeader, DesktopHeader } from 'components';
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  margin: 0 auto;
+  max-width: 996px;
+`;
 
 function IndexPage({ data }) {
-  const { logoInMacbook, mobileLogo, piggy } = data;
+  const { logoInMacbook, mobileAndTabletLogo, piggy } = data;
   return (
     <Wrapper>
-      <Header
-        logoInMacbook={logoInMacbook.sizes}
-        mobileLogo={mobileLogo.sizes}
-        piggy={piggy.sizes}
-      />
+      <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
+      {/* <DesktopHeader logoInMacbookSizes={logoInMacbook.sizes} piggySizes={piggy.sizes} /> */}
     </Wrapper>
   );
 }
 
+export default IndexPage;
+
 export const query = graphql`
   query IndexQuery {
-    mobileLogo: imageSharp(id: { regex: "/mobileLogo.png/" }) {
-      sizes(maxWidth: 152) {
+    mobileAndTabletLogo: imageSharp(id: { regex: "/mobileAndTabletLogo.png/" }) {
+      sizes(maxWidth: 312) {
         src
         srcSet
         srcWebp
         srcSetWebp
         sizes
         aspectRatio
-        tracedSVG
       }
     }
     logoInMacbook: imageSharp(id: { regex: "/logo_in_macbook.png/" }) {
@@ -121,5 +121,3 @@ export const query = graphql`
     }
   }
 `;
-
-export default IndexPage;

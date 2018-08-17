@@ -1,35 +1,57 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import './index.css'
+import React from 'react';
+import { injectGlobal } from 'styled-components';
+import Helmet from 'react-helmet';
+
+/* eslint-disable no-unused-expressions */
+injectGlobal`
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  li {
+    font-family: Open Sans;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: calc(14px + 0.5vw);
+    line-height: calc(1.1em + 0.5vw);
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+
+  h2 {
+    font-size: 1.625em;
+    line-height: 1.15384615em;
+  }
+
+  h3 {
+    font-size: 1.375em;
+    line-height: 1.13636364em;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.11111111em;
+  }
+`;
+/* eslint-enable no-unused-expressions */
 
 const Layout = ({ children, data }) => (
   <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 996,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+    <Helmet title={data.site.siteMetadata.title} />
+    <div>{children()}</div>
   </div>
-)
+);
 
-Layout.propTypes = {
-  children: PropTypes.func,
-}
-
-export default Layout
+export default Layout;
 
 export const query = graphql`
   query SiteTitleQuery {
@@ -39,4 +61,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

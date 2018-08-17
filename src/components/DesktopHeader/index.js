@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function ({  }) {
+function DesktopHeader() {
   return (
     <div>
-
+      DesktopHeader
     </div>
   );
 }
 
-export default ;
+export default DesktopHeader;
