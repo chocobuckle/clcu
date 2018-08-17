@@ -8,6 +8,12 @@ const Wrapper = styled.div`
   max-width: 996px;
 `;
 
+const HR = styled.hr`
+  border: 0;
+  border-top: 0.063em solid rgb(208, 210, 211);
+  margin: 0;
+`;
+
 function IndexPage({ data }) {
   const {
     logoInMacbook,
@@ -22,6 +28,7 @@ function IndexPage({ data }) {
     <Wrapper>
       <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
       {/* <DesktopHeader logoInMacbookSizes={logoInMacbook.sizes} piggySizes={piggy.sizes} /> */}
+      <HR />
       <TextBoxAndImgBoxContainer
         backgroundColor={green}
         headerFirstLineText="What was"
@@ -30,6 +37,7 @@ function IndexPage({ data }) {
         mobileAndDesktopImageWidth="81vw"
         textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
       />
+      <HR style={{ marginTop: '-4vw' }} />
       <TextBoxAndImgBoxContainer
         backgroundColor={darkGrey}
         headerFirstLineText="What was"
@@ -38,6 +46,7 @@ function IndexPage({ data }) {
         mobileAndDesktopImageWidth="100vw"
         textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
       />
+      <HR />
       <TextBoxAndImgBoxContainer
         backgroundColor={green}
         headerFirstLineText="What was"
@@ -46,6 +55,7 @@ function IndexPage({ data }) {
         mobileAndDesktopImageWidth="81vw"
         textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
       />
+      <HR />
       <TextBoxAndImgBoxContainer
         backgroundColor={darkGrey}
         headerFirstLineText="How did"

@@ -6,7 +6,7 @@ import { green } from 'sharedStyles';
 const Wrapper = styled.div`
   background: ${green};
   padding: 4vw 0;
-  margin-bottom: 8vw;
+  margin-bottom: 4vw;
 `;
 
 const MobileAndTabletLogo = styled(Img)`
