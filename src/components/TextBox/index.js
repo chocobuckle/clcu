@@ -4,17 +4,16 @@ import { green, darkGrey, lightGrey } from 'sharedStyles';
 
 const Wrapper = styled.div`
   background: ${green};
-  width: 100%;
 `;
 
 const LightGreyBox = styled.div`
   background: ${lightGrey};
-  width: 71%;
+  box-shadow: 0.639em 0.639em 1.688em rgba(35, 31, 32, 0.25);
   margin: 0 auto;
   padding: 3.5% 5%;
   position: relative;
   top: 5.5vw;
-  box-shadow: 0.639em 0.639em 1.688em rgba(35, 31, 32, 0.25);
+  width: 71%;
 `;
 
 const Header = styled.h2`
