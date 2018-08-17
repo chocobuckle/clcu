@@ -1,6 +1,7 @@
 import React from 'react';
 import { injectGlobal } from 'styled-components';
 import Helmet from 'react-helmet';
+import { darkGrey } from 'sharedStyles';
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
@@ -18,8 +19,12 @@ injectGlobal`
   }
 
   body {
-    font-size: calc(14px + 0.5vw);
+    font-size: calc(13px + 0.5vw);
     line-height: calc(1.1em + 0.5vw);
+  }
+
+  p {
+    color: ${darkGrey};
   }
 
   h1 {

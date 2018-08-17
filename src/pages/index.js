@@ -8,12 +8,17 @@ const Wrapper = styled.div`
 `;
 
 function IndexPage({ data }) {
-  const { logoInMacbook, mobileAndTabletLogo, piggy } = data;
+  const { logoInMacbook, mobileAndTabletLogo, piggy, tearOfJoy } = data;
   return (
     <Wrapper>
       <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
       {/* <DesktopHeader logoInMacbookSizes={logoInMacbook.sizes} piggySizes={piggy.sizes} /> */}
-      <TextBoxAndImgBoxContainer />
+      <TextBoxAndImgBoxContainer
+        headerFirstLineText="What was"
+        headerSecondLineText="the campaign?"
+        image={tearOfJoy}
+        textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
+      />
     </Wrapper>
   );
 }

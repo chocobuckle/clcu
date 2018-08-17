@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { greenBackground } from 'sharedStyles';
+import { green } from 'sharedStyles';
 
 const Wrapper = styled.div`
-  background: ${greenBackground};
+  background: ${green};
   padding: 4vw 0 3.9vw;
 `;
 
@@ -16,8 +16,8 @@ const MobileAndTabletLogo = styled(Img)`
 
 const Tagline = styled.h3`
   color: #fff;
-  font-size: 4.5vw;
-  letter-spacing : 0.035em;
+  font-size: 4.75vw;
+  letter-spacing: 0.035em;
   margin-top: 3vw;
   text-transform: uppercase;
   text-align: center;
