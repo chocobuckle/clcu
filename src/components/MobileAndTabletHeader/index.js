@@ -13,32 +13,10 @@ const MobileAndTabletLogo = styled(Img)`
   margin: 0 auto;
 `;
 
-const TaglineH1 = styled.h1`
-  ${'' /* color: #fff; */}
-  text-transform: uppercase;
-  text-align: center;
-`;
-
-const TaglineH2 = styled.h2`
-  ${'' /* color: #fff; */}
-  text-transform: uppercase;
-  text-align: center;
-`;
-
-const TaglineH3 = styled.h3`
-  ${'' /* color: #fff; */}
-  text-transform: uppercase;
-  text-align: center;
-`;
-
-const TaglineH4 = styled.h4`
-  ${'' /* color: #fff; */}
-  text-transform: uppercase;
-  text-align: center;
-`;
-
-const TaglineP = styled.p`
-  ${'' /* color: #fff; */}
+const Tagline = styled.h3`
+  color: #fff;
+  font-size: 4.5vw;
+  letter-spacing : 0.035em;
   text-transform: uppercase;
   text-align: center;
 `;
@@ -47,11 +25,7 @@ function MobileAndTabletHeader({ mobileAndTabletLogoSizes }) {
   return (
     <Wrapper>
       <MobileAndTabletLogo sizes={mobileAndTabletLogoSizes} />
-      <TaglineH1>Original Creative Campaigns</TaglineH1>
-      <TaglineH2>Original Creative Campaigns</TaglineH2>
-      <TaglineH3>Original Creative Campaigns</TaglineH3>
-      <TaglineH4>Original Creative Campaigns</TaglineH4>
-      <TaglineP>Original Creative Campaigns</TaglineP>
+      <Tagline>Original Creative Campaigns</Tagline>
     </Wrapper>
   );
 }
