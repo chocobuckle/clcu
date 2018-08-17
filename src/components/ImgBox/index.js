@@ -1,11 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import GatsbyImage from 'gatsby-image';
 
-function ImgBox() {
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16vw;
+`;
+
+const Img = styled(GatsbyImage)`
+  width: ${({ mobileAndDesktopImageWidth }) => mobileAndDesktopImageWidth};
+`;
+
+function ImgBox({ imageSizes, mobileAndDesktopImageWidth }) {
   return (
-    <div>
-      ImgBox
-    </div>
+    <Wrapper>
+      <Img sizes={imageSizes} mobileAndDesktopImageWidth={mobileAndDesktopImageWidth} />
+    </Wrapper>
   );
 }
 

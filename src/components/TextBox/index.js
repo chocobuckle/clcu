@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { green, darkGrey, lightGrey } from 'sharedStyles';
 
 const Wrapper = styled.div`
-  background: ${green};
+  background: ${({ backgroundColor }) => backgroundColor};
+  width: 100%;
 `;
 
 const LightGreyBox = styled.div`
@@ -24,14 +25,14 @@ const Header = styled.h2`
 `;
 
 const Text = styled.p`
-  text-align: center;
-  margin-top: 5%;
   margin-bottom: 25%;
+  margin-top: 5%;
+  text-align: center;
 `;
 
-function Textbox({ headerFirstLineText, headerSecondLineText, textContent }) {
+function Textbox({ backgroundColor, headerFirstLineText, headerSecondLineText, textContent }) {
   return (
-    <Wrapper>
+    <Wrapper backgroundColor={backgroundColor}>
       <LightGreyBox>
         <Header fontColor={darkGrey}>{headerFirstLineText}</Header>
         <Header fontColor={green}>{headerSecondLineText}</Header>

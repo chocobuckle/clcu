@@ -12,14 +12,23 @@ const Wrapper = styled.div`
   }
 `;
 
-function TextBoxAndImgBoxContainer({ headerFirstLineText, headerSecondLineText, image, textContent }) {
+function TextBoxAndImgBoxContainer({
+  backgroundColor,
+  headerFirstLineText,
+  headerSecondLineText,
+  imageSizes,
+  mobileAndDesktopImageWidth,
+  textContent
+}) {
   return (
     <Wrapper>
       <TextBox
+        backgroundColor={backgroundColor}
         headerFirstLineText={headerFirstLineText}
         headerSecondLineText={headerSecondLineText}
         textContent={textContent}
       />
+      <ImgBox imageSizes={imageSizes} mobileAndDesktopImageWidth={mobileAndDesktopImageWidth} />
     </Wrapper>
   );
 }
