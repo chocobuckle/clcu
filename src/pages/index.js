@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MobileAndTabletHeader, DesktopHeader } from 'components';
+import { MobileAndTabletHeader, TextBoxAndImgBoxContainer, DesktopHeader } from 'components';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -13,6 +13,7 @@ function IndexPage({ data }) {
     <Wrapper>
       <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
       {/* <DesktopHeader logoInMacbookSizes={logoInMacbook.sizes} piggySizes={piggy.sizes} /> */}
+      <TextBoxAndImgBoxContainer />
     </Wrapper>
   );
 }

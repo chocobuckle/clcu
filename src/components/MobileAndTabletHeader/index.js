@@ -5,10 +5,6 @@ import { greenBackground } from 'sharedStyles';
 
 const Wrapper = styled.div`
   background: ${greenBackground};
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   padding: 4vw 0 3.9vw;
 `;
 
