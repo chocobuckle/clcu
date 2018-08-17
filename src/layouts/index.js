@@ -19,11 +19,12 @@ injectGlobal`
   }
 
   body {
-    font-size: calc(13px + 0.5vw);
+    font-size: calc(14px + 0.5vw);
     line-height: calc(1.1em + 0.5vw);
   }
 
   p {
+    font-size: calc(12px + 0.5vw);
     color: ${darkGrey};
   }
 

@@ -23,7 +23,7 @@ const Header = styled.h2`
 
 const Text = styled.p`
   text-align: center;
-  margin-top: 7%;
+  margin-top: 5%;
 `;
 
 function Textbox({ headerFirstLineText, headerSecondLineText, textContent }) {
