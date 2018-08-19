@@ -4,17 +4,18 @@ import { green, darkGrey, lightGrey } from 'sharedStyles';
 
 const GreenBox = styled.div`
   background: ${({ backgroundColor }) => backgroundColor};
-  position: relative;
   height: 275px;
 `;
 
 const LightGreyBox = styled.div`
   background: ${lightGrey};
   box-shadow: 0.639em 0.639em 1.688em rgba(35, 31, 32, 0.25);
-  padding: 0.75em 1.5em 0;
+  padding-top: 1em;
   margin: 0 auto;
+  position: relative;
+  top: 18.61px;
   height: 300px;
-  width: 71%;
+  width: 80%;
 `;
 
 const Header = styled.h2`
@@ -26,7 +27,7 @@ const Header = styled.h2`
 `;
 
 const Text = styled.p`
-  margin-top: 1.25em;
+  margin: 1.2em 2.21em 0;
   text-align: center;
 `;
 

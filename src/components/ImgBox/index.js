@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 74px;
+  padding-top: 83px;
 `;
 
 const Img = styled(GatsbyImage)`

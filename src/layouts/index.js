@@ -5,6 +5,14 @@ import { darkGrey } from 'sharedStyles';
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
   body,
   h1,
   h2,
@@ -19,7 +27,7 @@ injectGlobal`
   }
 
   body {
-    font-size: calc(14px + 0.5vw);
+    font-size: calc(12px + 0.5vw);
     line-height: calc(1.1em + 0.5vw);
   }
 
