@@ -19,7 +19,7 @@ injectGlobal`
   }
 
   body {
-    font-size: calc(14px + 0.2vw);
+    font-size: calc(14px + 0.5vw);
     line-height: calc(1.1em + 0.5vw);
   }
 

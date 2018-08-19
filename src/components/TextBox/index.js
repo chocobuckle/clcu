@@ -25,7 +25,7 @@ const Header = styled.h2`
 `;
 
 const Text = styled.p`
-  margin-top: 1.5em;
+  margin-top: 1.25em;
   text-align: center;
 `;
 
