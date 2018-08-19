@@ -25,7 +25,7 @@ const HR = styled.hr`
 
   @media screen and (min-width: ${tablet}) {
     &:nth-child(${secondHR}) {
-      margin-top: 0;
+      margin-top: 4vw;
     }
   }
 `;

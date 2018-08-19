@@ -24,7 +24,8 @@ const LightGreyBox = styled.div`
   width: 80%;
 
   @media screen and (min-width: ${tablet}) {
-    height: 40vw;
+    height: 39vw;
+    top: 23.54px;
   }
 `;
 
