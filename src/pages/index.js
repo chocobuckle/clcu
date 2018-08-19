@@ -24,8 +24,10 @@ const HR = styled.hr`
   }
 
   @media screen and (min-width: ${tablet}) {
+    ${'' /* margin-top: 7vw; */}
+
     &:nth-child(${secondHR}) {
-      margin-top: 4vw;
+      margin-top: 5.65vw;
     }
   }
 `;
@@ -67,6 +69,9 @@ function IndexPage({ data }) {
         mobileImageWidth="100vw"
         tabletImageWidth="50vw"
         textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
+        uniqueStyle={{
+          // if desktop, height should be 380px, or in mobile is should be null. If desktop 'object-posiiton' should be 'left center', in mobile 'center center'
+        }}
       />
       <HR />
       <TextBoxAndImgBoxContainer
