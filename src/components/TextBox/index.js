@@ -1,10 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { green, darkGrey, lightGrey } from 'sharedStyles';
+import { green, darkGrey, lightGrey, tablet } from 'sharedStyles';
 
 const GreenBox = styled.div`
   background: ${({ backgroundColor }) => backgroundColor};
   height: 275px;
+
+  @media screen and (min-width: ${tablet}) {
+    flex-direction: row;
+    height: 37vw;
+    width: 50%;
+  }
 `;
 
 const LightGreyBox = styled.div`
@@ -16,6 +22,10 @@ const LightGreyBox = styled.div`
   top: 18.61px;
   height: 300px;
   width: 80%;
+
+  @media screen and (min-width: ${tablet}) {
+    height: 40vw;
+  }
 `;
 
 const Header = styled.h2`

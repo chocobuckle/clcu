@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  display: none;
+`;
+
 function DesktopHeader() {
   return (
-    <div>
+    <Wrapper>
       DesktopHeader
-    </div>
+    </Wrapper>
   );
 }
 

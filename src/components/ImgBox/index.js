@@ -1,22 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
 import GatsbyImage from 'gatsby-image';
+import { tablet } from 'sharedStyles';
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 83px;
+
+  @media screen and (min-width: ${tablet}) {
+    padding-top: 0;
+    width: 50vw;
+  }
 `;
 
 const Img = styled(GatsbyImage)`
-  width: ${({ mobileAndDesktopImageWidth }) => mobileAndDesktopImageWidth};
+  width: ${({ mobileImageWidth }) => mobileImageWidth};
+
+  @media screen and (min-width: ${tablet}) {
+    width: ${({ tabletImageWidth }) => tabletImageWidth};
+  }
 `;
 
-function ImgBox({ imageSizes, mobileAndDesktopImageWidth }) {
+function ImgBox({ imageSizes, mobileImageWidth, tabletImageWidth, uniqueStyle }) {
   return (
     <Wrapper>
-      <Img sizes={imageSizes} mobileAndDesktopImageWidth={mobileAndDesktopImageWidth} />
+      <Img
+        sizes={imageSizes}
+        mobileImageWidth={mobileImageWidth}
+        tabletImageWidth={tabletImageWidth}
+        style={{...uniqueStyle}}
+      />
     </Wrapper>
   );
 }
