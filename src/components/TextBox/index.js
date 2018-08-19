@@ -11,7 +11,7 @@ const GreenBox = styled.div`
 const LightGreyBox = styled.div`
   background: ${lightGrey};
   box-shadow: 0.639em 0.639em 1.688em rgba(35, 31, 32, 0.25);
-  padding: 0.75em 2em 0;
+  padding: 0.75em 1.5em 0;
   margin: 0 auto;
   height: 300px;
   width: 71%;
@@ -20,6 +20,7 @@ const LightGreyBox = styled.div`
 const Header = styled.h2`
   color: ${({ fontColor }) => fontColor};
   letter-spacing: 0.04em;
+  line-height: 1.24em;
   text-align: center;
   text-transform: uppercase;
 `;
