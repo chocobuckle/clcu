@@ -2,18 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { green, darkGrey, lightGrey } from 'sharedStyles';
 
-const Wrapper = styled.div`
+const GreenBox = styled.div`
   background: ${({ backgroundColor }) => backgroundColor};
-  width: 100%;
+  position: relative;
+  height: 275px;
 `;
 
 const LightGreyBox = styled.div`
   background: ${lightGrey};
   box-shadow: 0.639em 0.639em 1.688em rgba(35, 31, 32, 0.25);
+  padding: 0.75em 2em 0;
   margin: 0 auto;
-  padding: 3.5% 5%;
-  position: relative;
-  top: 5.5vw;
+  height: 300px;
   width: 71%;
 `;
 
@@ -25,20 +25,19 @@ const Header = styled.h2`
 `;
 
 const Text = styled.p`
-  margin-bottom: 25%;
-  margin-top: 5%;
+  margin-top: 1.5em;
   text-align: center;
 `;
 
 function Textbox({ backgroundColor, headerFirstLineText, headerSecondLineText, textContent }) {
   return (
-    <Wrapper backgroundColor={backgroundColor}>
+    <GreenBox backgroundColor={backgroundColor}>
       <LightGreyBox>
         <Header fontColor={darkGrey}>{headerFirstLineText}</Header>
         <Header fontColor={green}>{headerSecondLineText}</Header>
         <Text>{textContent}</Text>
       </LightGreyBox>
-    </Wrapper>
+    </GreenBox>
   );
 }
 
