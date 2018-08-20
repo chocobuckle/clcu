@@ -175,7 +175,7 @@ export const query = graphql`
       }
     }
     tabletAndDesktopLogo: imageSharp(id: { regex: "/tablet_and_desktop_logo_in_macbook.png/" }) {
-      sizes(maxWidth: 622) {
+      sizes(maxWidth: 707) {
         src
         srcSet
         srcWebp
