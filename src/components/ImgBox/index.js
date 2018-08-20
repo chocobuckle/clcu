@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import GatsbyImage from 'gatsby-image';
-import { tablet } from 'sharedStyles';
+import { tablet, desktop } from 'sharedStyles';
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   @media screen and (min-width: ${tablet}) {
     padding-top: 0;
     width: 50vw;
+  }
+
+  @media screen and (min-width: ${desktop}) {
+    width: 498px;
   }
 `;
 
