@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { MobileAndTabletHeader, TextBoxAndImgBoxContainer, DesktopHeader } from 'components';
+import { Header, TextBoxAndImgBoxContainer } from 'components';
 import { green, darkGrey, tablet, desktop } from 'sharedStyles';
 import throttle from 'lodash.throttle';
 
@@ -36,19 +36,24 @@ class IndexPage extends Component {
   render() {
     const { data } = this.props;
     const {
-      desktopLogo,
       mobileAndSupermarket,
-      mobileAndTabletLogo,
+      mobileLogo,
       peopleOfClane,
       piggy,
+      tabletAndDesktopLogo,
       tearOfJoy,
       tearOfJoyMac
     } = data;
     const { onMobile, onTablet } = this.state;
     return (
       <Wrapper>
-        <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
-        <DesktopHeader desktopLogoSizes={desktopLogo.sizes} piggySizes={piggy.sizes} />
+        <Header
+          onMobile={onMobile}
+          onTablet={onTablet}
+          mobileLogoSizes={mobileLogo.sizes}
+          tabletAndDesktopLogoSizes={tabletAndDesktopLogo.sizes}
+          piggySizes={piggy.sizes}
+        />
         <HR />
         <TextBoxAndImgBoxContainer
           backgroundColor={green}
@@ -160,7 +165,7 @@ export default IndexPage;
 
 export const query = graphql`
   query IndexQuery {
-    mobileAndTabletLogo: imageSharp(id: { regex: "/mobile_and_tablet_logo.png/" }) {
+    mobileLogo: imageSharp(id: { regex: "/mobile_logo.png/" }) {
       sizes(maxWidth: 311) {
         src
         srcSet
@@ -170,7 +175,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    desktopLogo: imageSharp(id: { regex: "/desktop_logo_in_macbook.png/" }) {
+    tabletAndDesktopLogo: imageSharp(id: { regex: "/tablet_and_desktop_logo_in_macbook.png/" }) {
       sizes(maxWidth: 622) {
         src
         srcSet

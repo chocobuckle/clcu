@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   margin-bottom: 4vw;
 `;
 
-const MobileAndTabletLogo = styled(Img)`
+const MobileLogo = styled(Img)`
   width: 40.5%;
   max-width: 312px;
   margin: 0 auto;
@@ -24,13 +24,13 @@ const Tagline = styled.h3`
   text-align: center;
 `;
 
-function MobileAndTabletHeader({ mobileAndTabletLogoSizes }) {
+function MobileHeader({ mobileLogoSizes }) {
   return (
     <Wrapper>
-      <MobileAndTabletLogo sizes={mobileAndTabletLogoSizes} />
+      <MobileLogo sizes={mobileLogoSizes} />
       <Tagline>Original Creative Campaigns</Tagline>
     </Wrapper>
   );
 }
 
-export default MobileAndTabletHeader;
+export default MobileHeader;
