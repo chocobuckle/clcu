@@ -22,7 +22,7 @@ class IndexPage extends Component {
         };
       }
     });
-  }, 100); // Or maybe change this to 250?
+  }, 100);
 
   componentDidMount() {
     this.handleWindowResize();
@@ -121,10 +121,10 @@ const Wrapper = styled.div`
   max-width: 996px;
 `;
 
-const secondHR = 5;
-const thirdHR = 7;
-const fourthHR = 9;
-const fifthHR = 11;
+const secondHR = 4;
+const thirdHR = 6;
+const fourthHR = 8;
+const fifthHR = 10;
 const HR = styled.hr`
   border: 0;
   border-top: 0.063em solid rgb(208, 210, 211);
