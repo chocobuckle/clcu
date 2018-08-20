@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Header, TextBoxAndImgBoxContainer } from 'components';
-import { green, darkGrey, tablet, desktop } from 'sharedStyles';
+import { green, darkGrey, lightGrey, tablet, desktop } from 'sharedStyles';
 import throttle from 'lodash.throttle';
 
 class IndexPage extends Component {
@@ -69,7 +69,7 @@ class IndexPage extends Component {
         <TextBoxAndImgBoxContainer
           backgroundColor={darkGrey}
           gatsbyImgWrapperStyle={{
-            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : '-2.8% center'
+            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : '5% center'
           }}
           headerFirstLineText="What was"
           headerSecondLineText="the creative brief?"
@@ -116,8 +116,11 @@ class IndexPage extends Component {
 }
 
 const Wrapper = styled.div`
+  background-color: #fff;
+  border: 1px solid ${lightGrey};
   margin: 0 auto;
   max-width: 996px;
+  overflow-x: hidden;
 `;
 
 const secondHR = 4;

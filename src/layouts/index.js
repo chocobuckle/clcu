@@ -1,7 +1,7 @@
 import React from 'react';
-import { injectGlobal } from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 import Helmet from 'react-helmet';
-import { darkGrey, desktop } from 'sharedStyles';
+import { darkGrey, lightGrey, desktop } from 'sharedStyles';
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
@@ -70,7 +70,7 @@ injectGlobal`
 const Layout = ({ children, data }) => (
   <div>
     <Helmet title={data.site.siteMetadata.title} />
-    <div>{children()}</div>
+    <div style={{ backgroundColor: lightGrey }}>{children()}</div>
   </div>
 );
 
