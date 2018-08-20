@@ -1,13 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
 import MobileHeader from 'components/Header/MobileHeader';
 import TabletAndDesktopHeader from 'components/Header/TabletAndDesktopHeader';
 
-function Header({ onMobile, onTablet, mobileLogoSizes, tabletAndDesktopLogoSizes, piggySizes }) {
+function Header({ onMobile, mobileLogoSizes, tabletAndDesktopLogoSizes, piggySizes }) {
   return (
     <div>
-      {onMobile && <MobileHeader mobileLogoSizes={mobileLogoSizes} />}
-      {onTablet && (
+      {onMobile ? (
+        <MobileHeader mobileLogoSizes={mobileLogoSizes} />
+      ) : (
         <TabletAndDesktopHeader
           tabletAndDesktopLogoSizes={tabletAndDesktopLogoSizes}
           piggySizes={piggySizes}

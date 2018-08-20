@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function TabletAndDesktopHeader() {
   return (
     <div>
-      DesktopHeader
+      TabletAndDesktopHeader
     </div>
   );
 }

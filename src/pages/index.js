@@ -50,7 +50,6 @@ class IndexPage extends Component {
         <Header
           mobileLogoSizes={mobileLogo.sizes}
           onMobile={onMobile}
-          onTablet={onTablet}
           piggySizes={piggy.sizes}
           tabletAndDesktopLogoSizes={tabletAndDesktopLogo.sizes}
         />
