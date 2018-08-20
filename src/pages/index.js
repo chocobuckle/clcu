@@ -88,7 +88,7 @@ class IndexPage extends Component {
           headerSecondLineText="creative concept?"
           imageSizes={tearOfJoyMac.sizes}
           uniqueStyle={{
-            top: onMobile ? 0 : onTablet ? '0.59vw' : '5.8764px',
+            top: onMobile ? 0 : onTablet ? '0.53vw' : '5.2788px',
             width: onMobile ? '81vw' : onTablet ? '40.25vw' : '400.875px'
           }}
           textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
