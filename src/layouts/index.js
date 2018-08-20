@@ -1,7 +1,7 @@
 import React from 'react';
 import { injectGlobal } from 'styled-components';
 import Helmet from 'react-helmet';
-import { darkGrey } from 'sharedStyles';
+import { darkGrey, desktop } from 'sharedStyles';
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
@@ -29,11 +29,20 @@ injectGlobal`
   body {
     font-size: calc(12px + 0.5vw);
     line-height: calc(1.1em + 0.5vw);
+
+    @media screen and (min-width: ${desktop}) {
+      font-size: 16.98px;
+      line-height: 23.658px;
+    }
   }
 
   p {
     font-size: calc(9px + 0.5vw);
     color: ${darkGrey};
+
+    @media screen and (min-width: ${desktop}) {
+      font-size: 13.98px;
+    }
   }
 
   h1 {
