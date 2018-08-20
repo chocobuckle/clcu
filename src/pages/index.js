@@ -6,15 +6,23 @@ import throttle from 'lodash.throttle';
 
 class IndexPage extends Component {
   state = {
-    viewportWidth: 0
+    onMobile: null
   };
 
   handleWindowResize = throttle(() => {
-    this.setState({ viewportWidth: window.innerWidth });
+    const viewportWidth = window.innerWidth;
+    const onMobile = viewportWidth < parseInt(tablet, 10);
+    this.setState((prevState) => {
+      if (prevState.onMobile !== onMobile) {
+        return {
+          onMobile
+        }
+      }
+    });
   }, 250);
 
   componentDidMount() {
-    this.handleWindowResize(); // Set width
+    this.handleWindowResize();
     window.addEventListener('resize', this.handleWindowResize);
   }
 
@@ -33,8 +41,8 @@ class IndexPage extends Component {
       tearOfJoy,
       tearOfJoyMac
     } = data;
-    const { viewportWidth } = this.state;
-    console.log(viewportWidth);
+    const { onMobile } = this.state;
+    console.log(onMobile);
     return (
       <Wrapper>
         <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
