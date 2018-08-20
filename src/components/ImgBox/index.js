@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const Img = styled(GatsbyImage)`
+  position: relative;
   width: ${({ mobileImageWidth }) => mobileImageWidth};
 
   @media screen and (min-width: ${tablet}) {
@@ -23,14 +24,21 @@ const Img = styled(GatsbyImage)`
   }
 `;
 
-function ImgBox({ imageSizes, mobileImageWidth, tabletImageWidth, uniqueStyle }) {
+function ImgBox({
+  gatsbyImgWrapperStyle,
+  imageSizes,
+  mobileImageWidth,
+  tabletImageWidth,
+  uniqueStyle
+}) {
   return (
     <Wrapper>
       <Img
+        imgStyle={{ ...gatsbyImgWrapperStyle }}
         sizes={imageSizes}
         mobileImageWidth={mobileImageWidth}
         tabletImageWidth={tabletImageWidth}
-        style={{...uniqueStyle}}
+        style={{ ...uniqueStyle }}
       />
     </Wrapper>
   );

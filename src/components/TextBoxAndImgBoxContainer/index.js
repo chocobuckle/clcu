@@ -15,11 +15,12 @@ const Wrapper = styled.div`
 
 function TextBoxAndImgBoxContainer({
   backgroundColor,
-  tabletImageWidth,
+  gatsbyImgWrapperStyle,
   headerFirstLineText,
   headerSecondLineText,
   imageSizes,
   mobileImageWidth,
+  tabletImageWidth,
   textContent,
   uniqueStyle
 }) {
@@ -32,6 +33,7 @@ function TextBoxAndImgBoxContainer({
         textContent={textContent}
       />
       <ImgBox
+        gatsbyImgWrapperStyle={gatsbyImgWrapperStyle}
         imageSizes={imageSizes}
         tabletImageWidth={tabletImageWidth}
         mobileImageWidth={mobileImageWidth}

@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { MobileAndTabletHeader, TextBoxAndImgBoxContainer, DesktopHeader } from 'components';
-import { green, darkGrey, tablet } from 'sharedStyles';
+import { green, darkGrey, tablet, desktop } from 'sharedStyles';
 import throttle from 'lodash.throttle';
 
 class IndexPage extends Component {
   state = {
-    onMobile: null
+    onMobile: null,
+    onTablet: null
   };
 
   handleWindowResize = throttle(() => {
     const viewportWidth = window.innerWidth;
     const onMobile = viewportWidth < parseInt(tablet, 10);
+    const onTablet = viewportWidth >= parseInt(tablet, 10) && viewportWidth < parseInt(desktop, 10);
     this.setState((prevState) => {
-      if (prevState.onMobile !== onMobile) {
+      if (onMobile !== prevState.onMobile || onTablet !== prevState.onTablet) {
         return {
-          onMobile
-        }
+          onMobile,
+          onTablet
+        };
       }
     });
-  }, 250);
+  }, 100); // Or maybe change this to 250?
 
   componentDidMount() {
     this.handleWindowResize();
@@ -41,8 +44,7 @@ class IndexPage extends Component {
       tearOfJoy,
       tearOfJoyMac
     } = data;
-    const { onMobile } = this.state;
-    console.log(onMobile);
+    const { onMobile, onTablet } = this.state;
     return (
       <Wrapper>
         <MobileAndTabletHeader mobileAndTabletLogoSizes={mobileAndTabletLogo.sizes} />
@@ -53,12 +55,10 @@ class IndexPage extends Component {
           headerFirstLineText="What was"
           headerSecondLineText="the campaign?"
           imageSizes={tearOfJoy.sizes}
-          mobileImageWidth="81vw"
-          tabletImageWidth="45vw"
           textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
           uniqueStyle={{
-            position: 'relative',
-            top: '0' // 1.5 in desktop
+            top: onMobile ? 0 : onTablet ? '3.25vw' : 0,
+            width: onMobile ? '81vw' : onTablet ? '45vw' : '45vw'
           }}
         />
         <HR />
@@ -67,14 +67,14 @@ class IndexPage extends Component {
           headerFirstLineText="What was the"
           headerSecondLineText="creative brief?"
           imageSizes={peopleOfClane.sizes}
-          mobileImageWidth="100vw"
-          tabletImageWidth="50vw"
           textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
-          uniqueStyle={
-            {
-              // if desktop, height should be 380px, or in mobile is should be null. If desktop 'object-posiiton' should be 'left center', in mobile 'center center'
-            }
-          }
+          uniqueStyle={{
+            height: onMobile ? null : onTablet ? '380px' : '380px',
+            width: onMobile ? '100vw' : onTablet ? '50vw' : '50vw'
+          }}
+          gatsbyImgWrapperStyle={{
+            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : 'left center'
+          }}
         />
         <HR />
         <TextBoxAndImgBoxContainer
