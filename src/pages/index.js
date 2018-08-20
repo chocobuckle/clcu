@@ -70,7 +70,7 @@ class IndexPage extends Component {
         <TextBoxAndImgBoxContainer
           backgroundColor={darkGrey}
           gatsbyImgWrapperStyle={{
-            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : 'left center'
+            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : '-2.8% center'
           }}
           headerFirstLineText="What was"
           headerSecondLineText="the creative brief?"
