@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { TextBox, ImgBox } from 'components';
-import { tablet } from 'sharedStyles';
+import { tablet, desktop } from 'sharedStyles';
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,6 +10,10 @@ const Wrapper = styled.div`
 
   @media screen and (min-width: ${tablet}) {
     flex-direction: row;
+  }
+
+  @media screen and (min-width: ${desktop}) {
+    padding: 39.84px 0;
   }
 `;
 

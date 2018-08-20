@@ -69,8 +69,8 @@ class IndexPage extends Component {
           imageSizes={peopleOfClane.sizes}
           textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
           uniqueStyle={{
-            height: onMobile ? null : onTablet ? '380px' : '380px',
-            width: onMobile ? '100vw' : onTablet ? '50vw' : '50vw'
+            height: onMobile ? null : '380px',
+            width: onMobile ? '100vw' : onTablet ? '50vw' : '498px'
           }}
           gatsbyImgWrapperStyle={{
             objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : 'left center'
@@ -108,6 +108,7 @@ const Wrapper = styled.div`
 `;
 
 const secondHR = 5;
+const thirdHR = 7;
 const lastHR = 11;
 const HR = styled.hr`
   border: 0;
@@ -123,10 +124,16 @@ const HR = styled.hr`
   }
 
   @media screen and (min-width: ${tablet}) {
-    ${'' /* margin-top: 7vw; */}
-
+    &:nth-child(${thirdHR}),
     &:nth-child(${secondHR}) {
-      margin-top: 5.65vw;
+      margin-top: 5.1vw;
+    }
+  }
+
+  @media screen and (min-width: ${desktop}) {
+    &:nth-child(${thirdHR}),
+    &:nth-child(${secondHR}) {
+      margin-top: 50.796px;
     }
   }
 `;
