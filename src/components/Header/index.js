@@ -6,13 +6,13 @@ import TabletAndDesktopHeader from 'components/Header/TabletAndDesktopHeader';
 function Header({ onMobile, onTablet, mobileLogoSizes, tabletAndDesktopLogoSizes, piggySizes }) {
   return (
     <div>
-      {onMobile || onTablet && <MobileHeader mobileLogoSizes={mobileLogoSizes} />}
-      {/* {onTablet && (
+      {onMobile && <MobileHeader mobileLogoSizes={mobileLogoSizes} />}
+      {onTablet && (
         <TabletAndDesktopHeader
           tabletAndDesktopLogoSizes={tabletAndDesktopLogoSizes}
           piggySizes={piggySizes}
         />
-      )} */}
+      )}
     </div>
   );
 }
