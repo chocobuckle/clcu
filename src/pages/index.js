@@ -96,6 +96,13 @@ class IndexPage extends Component {
           imageSizes={mobileAndSupermarket.sizes}
           mobileImageWidth="100vw"
           tabletImageWidth="81vw"
+          uniqueStyle={{
+            height: onMobile ? null : '380px',
+            width: onMobile ? '100vw' : onTablet ? '50vw' : '498px'
+          }}
+          gatsbyImgWrapperStyle={{
+            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : 'left center'
+          }}
           textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
         />
         <HR />
