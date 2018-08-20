@@ -18,13 +18,19 @@ const TabletAndDesktopImg = styled(Img)`
   margin: 0 auto;
 `;
 
-const PiggyImg = styled(Img)``;
+const piggyImgStyle = {
+  position: 'absolute',
+  width: '16%',
+  bottom: '35%',
+  left: '-3%',
+  maxWidth: '159.36px'
+};
 
 function TabletAndDesktopHeader({ tabletAndDesktopLogoSizes, piggySizes }) {
   return (
     <Wrapper>
       <TabletAndDesktopImg sizes={tabletAndDesktopLogoSizes} />
-      {/* <PiggyImg sizes={piggySizes} /> */}
+      <Img sizes={piggySizes} style={{ ...piggyImgStyle }} />
     </Wrapper>
   );
 }
