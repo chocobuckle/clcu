@@ -53,7 +53,7 @@ class IndexPage extends Component {
           piggySizes={piggy.sizes}
           tabletAndDesktopLogoSizes={tabletAndDesktopLogo.sizes}
         />
-        <HR />
+        <HR style={{ opacity: onMobile ? 1 : 0 }} />
         <TextBoxAndImgBoxContainer
           backgroundColor={green}
           headerFirstLineText="What was"

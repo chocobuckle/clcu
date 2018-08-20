@@ -26,7 +26,7 @@ const TabletAndDesktopImg = styled(Img)`
 const piggyImgStyle = {
   position: 'relative',
   width: '16%',
-  bottom: '35%',
+  bottom: '37%',
   left: '-3%',
   maxWidth: '159.36px'
 };
