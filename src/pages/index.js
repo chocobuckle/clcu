@@ -119,7 +119,7 @@ const Wrapper = styled.div`
 const secondHR = 5;
 const thirdHR = 7;
 const fourthHR = 9;
-const lastHR = 11;
+const fifthHR = 11;
 const HR = styled.hr`
   border: 0;
   border-top: 0.063em solid rgb(208, 210, 211);
@@ -129,14 +129,15 @@ const HR = styled.hr`
     margin-top: -4vw;
   }
 
-  &:nth-child(${lastHR}) {
+  &:nth-child(${fifthHR}) {
     margin-bottom: 4vw;
   }
 
   @media screen and (min-width: ${tablet}) {
     &:nth-child(${secondHR}),
     &:nth-child(${thirdHR}),
-    &:nth-child(${fourthHR}) {
+    &:nth-child(${fourthHR}),
+    &:nth-child(${fifthHR}) {
       margin-top: 5.1vw;
     }
   }
@@ -144,8 +145,13 @@ const HR = styled.hr`
   @media screen and (min-width: ${desktop}) {
     &:nth-child(${secondHR}),
     &:nth-child(${thirdHR}),
-    &:nth-child(${fourthHR}) {
+    &:nth-child(${fourthHR}),
+    &:nth-child(${fifthHR}) {
       margin-top: 50.796px;
+    }
+
+    &:nth-child(${fifthHR}) {
+      margin-bottom: 39.84px;
     }
   }
 `;
