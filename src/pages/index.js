@@ -82,8 +82,10 @@ class IndexPage extends Component {
           headerFirstLineText="What was the"
           headerSecondLineText="creative concept?"
           imageSizes={tearOfJoyMac.sizes}
-          mobileImageWidth="81vw"
-          tabletImageWidth="81vw"
+          uniqueStyle={{
+            top: onMobile ? 0 : onTablet ? '0.59vw' : '5.8764px',
+            width: onMobile ? '81vw' : onTablet ? '40.25vw' : '400.875px'
+          }}
           textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
         />
         <HR />
@@ -109,6 +111,7 @@ const Wrapper = styled.div`
 
 const secondHR = 5;
 const thirdHR = 7;
+const fourthHR = 9;
 const lastHR = 11;
 const HR = styled.hr`
   border: 0;
@@ -124,15 +127,17 @@ const HR = styled.hr`
   }
 
   @media screen and (min-width: ${tablet}) {
+    &:nth-child(${secondHR}),
     &:nth-child(${thirdHR}),
-    &:nth-child(${secondHR}) {
+    &:nth-child(${fourthHR}) {
       margin-top: 5.1vw;
     }
   }
 
   @media screen and (min-width: ${desktop}) {
+    &:nth-child(${secondHR}),
     &:nth-child(${thirdHR}),
-    &:nth-child(${secondHR}) {
+    &:nth-child(${fourthHR}) {
       margin-top: 50.796px;
     }
   }
