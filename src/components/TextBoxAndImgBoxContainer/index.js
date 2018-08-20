@@ -23,8 +23,6 @@ function TextBoxAndImgBoxContainer({
   headerFirstLineText,
   headerSecondLineText,
   imageSizes,
-  mobileImageWidth,
-  tabletImageWidth,
   textContent,
   uniqueStyle
 }) {
@@ -39,8 +37,6 @@ function TextBoxAndImgBoxContainer({
       <ImgBox
         gatsbyImgWrapperStyle={gatsbyImgWrapperStyle}
         imageSizes={imageSizes}
-        tabletImageWidth={tabletImageWidth}
-        mobileImageWidth={mobileImageWidth}
         uniqueStyle={uniqueStyle}
       />
     </Wrapper>

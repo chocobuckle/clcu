@@ -99,8 +99,6 @@ class IndexPage extends Component {
           headerFirstLineText="How did"
           headerSecondLineText="it go?"
           imageSizes={mobileAndSupermarket.sizes}
-          mobileImageWidth="100vw"
-          tabletImageWidth="81vw"
           uniqueStyle={{
             height: onMobile ? null : '380px',
             width: onMobile ? '100vw' : onTablet ? '50vw' : '498px'
