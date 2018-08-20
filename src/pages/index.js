@@ -48,11 +48,11 @@ class IndexPage extends Component {
     return (
       <Wrapper>
         <Header
+          mobileLogoSizes={mobileLogo.sizes}
           onMobile={onMobile}
           onTablet={onTablet}
-          mobileLogoSizes={mobileLogo.sizes}
-          tabletAndDesktopLogoSizes={tabletAndDesktopLogo.sizes}
           piggySizes={piggy.sizes}
+          tabletAndDesktopLogoSizes={tabletAndDesktopLogo.sizes}
         />
         <HR />
         <TextBoxAndImgBoxContainer
@@ -69,16 +69,17 @@ class IndexPage extends Component {
         <HR />
         <TextBoxAndImgBoxContainer
           backgroundColor={darkGrey}
+          gatsbyImgWrapperStyle={{
+            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : 'left center'
+          }}
           headerFirstLineText="What was"
           headerSecondLineText="the creative brief?"
           imageSizes={peopleOfClane.sizes}
+          swapOrder
           textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
           uniqueStyle={{
             height: onMobile ? null : '380px',
             width: onMobile ? '100vw' : onTablet ? '50vw' : '498px'
-          }}
-          gatsbyImgWrapperStyle={{
-            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : 'left center'
           }}
         />
         <HR />
@@ -87,26 +88,27 @@ class IndexPage extends Component {
           headerFirstLineText="What was the"
           headerSecondLineText="creative concept?"
           imageSizes={tearOfJoyMac.sizes}
+          textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
           uniqueStyle={{
             top: onMobile ? 0 : onTablet ? '0.53vw' : '5.2788px',
             width: onMobile ? '81vw' : onTablet ? '40.25vw' : '400.875px'
           }}
-          textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
         />
         <HR />
         <TextBoxAndImgBoxContainer
           backgroundColor={darkGrey}
+          gatsbyImgWrapperStyle={{
+            objectPosition: onMobile ? 'center center' : onTablet ? '39% 50%' : 'left center'
+          }}
           headerFirstLineText="How did"
           headerSecondLineText="it go?"
           imageSizes={mobileAndSupermarket.sizes}
+          swapOrder
+          textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
           uniqueStyle={{
             height: onMobile ? null : '380px',
             width: onMobile ? '100vw' : onTablet ? '50vw' : '498px'
           }}
-          gatsbyImgWrapperStyle={{
-            objectPosition: onMobile ? 'center center' : onTablet ? 'left center' : 'left center'
-          }}
-          textContent="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et."
         />
         <HR />
       </Wrapper>

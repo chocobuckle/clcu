@@ -9,7 +9,9 @@ const Wrapper = styled.div`
   padding: 4vw 0;
 
   @media screen and (min-width: ${tablet}) {
-    flex-direction: row;
+    flex-direction: ${({ swapOrder }) => {
+      return swapOrder ? 'row-reverse' : 'row';
+    }};
   }
 
   @media screen and (min-width: ${desktop}) {
@@ -23,11 +25,13 @@ function TextBoxAndImgBoxContainer({
   headerFirstLineText,
   headerSecondLineText,
   imageSizes,
+  swapOrder,
   textContent,
   uniqueStyle
 }) {
   return (
-    <Wrapper>
+    <Wrapper
+      swapOrder={swapOrder}>
       <TextBox
         backgroundColor={backgroundColor}
         headerFirstLineText={headerFirstLineText}
